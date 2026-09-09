@@ -1,0 +1,12 @@
+[Unit]
+Description=Watch removable media for signed squashfs lockbox image
+Documentation=file:///etc/squashfs-automount/config
+After=usermount.service
+
+[Path]
+# If you change IMAGE_NAME in config, update this glob to match.
+PathExistsGlob=/var/rootdirs/media/*/torizon-lockbox.squashfs
+Unit=squashfs-automount.service
+
+[Install]
+WantedBy=multi-user.target

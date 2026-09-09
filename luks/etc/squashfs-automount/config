@@ -1,0 +1,12 @@
+# LUKS container filename under /media/<volume>/
+# If you change this, also update PathExistsGlob in squashfs-automount.path
+IMAGE_NAME=torizon-lockbox.luks
+
+# Keyfile on the device (mode 600). Without it, the container is not opened.
+KEYFILE=/etc/squashfs-automount/luks.key
+
+# dm-crypt mapping name under /dev/mapper/
+MAPPER_NAME=squashfs-lockbox
+
+MOUNTPOINT=/mnt/squashfs-lockbox
+SETTLE_TIMEOUT_SEC=30

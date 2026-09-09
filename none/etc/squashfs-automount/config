@@ -1,0 +1,6 @@
+# Filename under /media/<volume>/
+# If you change this, also update PathExistsGlob in squashfs-automount.path
+IMAGE_NAME=torizon-lockbox.squashfs
+
+MOUNTPOINT=/mnt/squashfs-lockbox
+SETTLE_TIMEOUT_SEC=30

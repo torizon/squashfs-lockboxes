@@ -1,0 +1,14 @@
+# Place your OpenSSL public key at PUBKEY (PEM). Without it, images are not mounted.
+
+# Filename under /media/<volume>/
+# If you change this, also update PathExistsGlob in squashfs-automount.path
+IMAGE_NAME=torizon-lockbox.squashfs
+
+# Detached signature filename is IMAGE_NAME + SIG_SUFFIX (e.g. torizon-lockbox.squashfs.sig)
+SIG_SUFFIX=.sig
+
+# PEM public key used with: openssl dgst -sha256 -verify
+PUBKEY=/etc/squashfs-automount/pubkey.pem
+
+MOUNTPOINT=/mnt/squashfs-lockbox
+SETTLE_TIMEOUT_SEC=30

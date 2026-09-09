@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount squashfs lockbox from removable media
+Documentation=file:///etc/squashfs-automount/config
+After=usermount.service local-fs.target
+Wants=usermount.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/etc/squashfs-automount/mount.sh
+ExecStop=/etc/squashfs-automount/umount.sh
+
+[Install]
+WantedBy=multi-user.target

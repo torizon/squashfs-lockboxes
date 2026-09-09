@@ -25,4 +25,4 @@ systemctl daemon-reload
 systemctl enable --now squashfs-automount.path
 udevadm control --reload-rules
 
-echo "installed (none). plug in USB with torizon-lockbox.squashfs"
+echo "installed (base variant). plug in USB with torizon-lockbox.squashfs"

@@ -25,4 +25,4 @@ systemctl daemon-reload
 systemctl enable --now squashfs-automount.path
 udevadm control --reload-rules
 
-echo "installed (signed). install pubkey at /etc/squashfs-automount/pubkey.pem"
+echo "installed (signed variant). install pubkey at /etc/squashfs-automount/pubkey.pem; unsigned images or images not signed with this key will not be mounted"

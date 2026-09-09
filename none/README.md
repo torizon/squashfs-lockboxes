@@ -21,4 +21,4 @@ torizon-lockbox.squashfs
 mksquashfs ./lockbox-dir torizon-lockbox.squashfs -comp gzip
 ```
 
-Use gzip (or another compressor your target kernel supports). This Torizon image’s squashfs module is **zlib/gzip only**.
+Torizon's squashfs module is **zlib/gzip only**, so don't use other forms of compression unless you've done a custom Torizon OS build with those configs enabled.

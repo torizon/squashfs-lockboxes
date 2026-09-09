@@ -25,4 +25,4 @@ systemctl daemon-reload
 systemctl enable --now squashfs-automount.path
 udevadm control --reload-rules
 
-echo "installed (luks). install keyfile at /etc/squashfs-automount/luks.key (mode 600)"
+echo "installed (luks variant). install keyfile at /etc/squashfs-automount/luks.key (mode 600); if the keyfile is not present or incorrect, the LUKS volume will not be decrypted"

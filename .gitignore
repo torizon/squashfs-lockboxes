@@ -1,0 +1,6 @@
+*.pem
+*.key
+*.sig
+*.squashfs
+*.luks
+.DS_Store

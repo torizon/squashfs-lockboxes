@@ -8,7 +8,7 @@ Variants demonstrate how to add signature verification before filesystem mount a
 
 | Directory | Integrity / confidentiality | USB contents | Device secret |
 |-----------|------------------------------|--------------|---------------|
-| [`none/`](none/) | None - mount if present | `torizon-lockbox.squashfs` | - |
+| [`basic/`](basic/) | None - mount if present | `torizon-lockbox.squashfs` | - |
 | [`signed/`](signed/) | Detached OpenSSL signature | `torizon-lockbox.squashfs`, `torizon-lockbox.squashfs.sig` | Public key |
 | [`luks/`](luks/) | LUKS2 encryption | `torizon-lockbox.luks` | Keyfile |
 
@@ -28,7 +28,7 @@ All these should be available on all Torizon 7 releases, but this has only been 
 ## Quick start
 
 ```sh
-cd signed    # or none / luks
+cd basic    # or signed / luks
 sudo ./install.sh
 # then install the variant-specific secret (see that variant's README)
 ```
